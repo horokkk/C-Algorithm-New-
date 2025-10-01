@@ -12,5 +12,5 @@ int main(){
         sum+=a*b;
     }
     
-    (sum==X)? cout <<"Yes" : cout <<"No";
+    cout << (sum==X ? "Yes" : "No");
 }
