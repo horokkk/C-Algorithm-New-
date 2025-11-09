@@ -4,20 +4,12 @@ using namespace std;
 
 int main(){
     string s;
-    int ans = 0;
     cin >>s;
-    
-    for(char ch:s){
-        char c=(unsigned char)ch;
-        if(c>='A'&&c<='C') ans+=3;
-        else if(c<='F') ans+=4;
-        else if(c<='I') ans+=5;
-        else if(c<='L') ans+=6;
-        else if(c<='O') ans+=7;
-        else if(c<='S') ans+=8;
-        else if(c<='V') ans+=9;
-        else if(c<='Z') ans+=10;
-    }
+    int mapTime[26] = {
+        3,3,3, 4,4,4, 5,5,5, 6,6,6, 7,7,7, 8,8,8,8, 9,9,9, 10,10,10,10
+    };
+    int ans=0;
+    for (char c:s) ans+=mapTime[c-'A'];
     
     cout <<ans;
 }
